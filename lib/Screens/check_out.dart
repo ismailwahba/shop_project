@@ -68,46 +68,27 @@ class CheckOutState extends State<CheckOut> {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 9),
-                    decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromARGB(78, 0, 0, 0),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ]),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          child: Text(
-                            "Jone Doe +961-12345678",
-                            style: TextStyle(color: Colors.grey, fontSize: 20),
-                          ),
-                        ),
-                        Container(
-                          child: Text(
-                            "School Street , Behind the Official School ",
-                            style: TextStyle(color: Colors.grey, fontSize: 20),
-                          ),
-                        ),
-                        Container(
-                          child: Text(
-                            "Maghdouch , Saida ,  Lebanon, 1600",
-                            style: TextStyle(color: Colors.grey, fontSize: 20),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+               Container(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 9),
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromARGB(78, 0, 0, 0),
+                        spreadRadius: 1,
+                        blurRadius: 7,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ]),
+                child: Container(
+                  child: Text(
+                    "Jone Doe +961-12345678 School Street , Behind the Official School Maghdouch , Saida ,  Lebanon, 1600",
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                ),
               ),
               SizedBox(
                 height: 20,
@@ -118,7 +99,10 @@ class CheckOutState extends State<CheckOut> {
                   Container(
                     child: Text("Shiping Mode",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20)),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          fontFamily: "Ral",
+                        )),
                   ),
                   Container(
                     child: Text(
@@ -171,7 +155,10 @@ class CheckOutState extends State<CheckOut> {
                   Container(
                     child: Text("Your Cart",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20)),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          fontFamily: "Ral",
+                        )),
                   ),
                   Container(
                     child: Text(
@@ -193,8 +180,8 @@ class CheckOutState extends State<CheckOut> {
                           opacity: 0.8,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.network(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxnSwp7Z-N0LGWolNTDK4va1RuisOIjCF1oJjPa89_Fjh2O6RlTcypYOVHjUoeRjmnWE&usqp=CAU",
+                            child: Image.asset(
+                              "images/images1.jpeg",
                               fit: BoxFit.cover,
                               width: 200,
                               height: 150,
@@ -210,8 +197,8 @@ class CheckOutState extends State<CheckOut> {
                           opacity: 0.8,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.network(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzqDQ5E2koQ7Pu27Cu9BKRVeutPvz6QrxCBQ&usqp=CAU",
+                            child: Image.asset(
+                              "images/images5.jpeg",
                               fit: BoxFit.cover,
                               width: 200,
                               height: 150,
@@ -227,8 +214,8 @@ class CheckOutState extends State<CheckOut> {
                           opacity: 0.8,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.network(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvnLFRMtBhfP9MHDBry2nfJEwMsCWiDhES4g&usqp=CAU",
+                            child: Image.asset(
+                              "images/images.png",
                               fit: BoxFit.cover,
                               width: 200,
                               height: 150,
@@ -244,8 +231,8 @@ class CheckOutState extends State<CheckOut> {
                           opacity: 0.8,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Image.network(
-                              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdhNBkL8WEPHyzG2LGakFcmraI5aso5okt__9hiiGVkxONjPHmxnYP3hs3pFzXM6RY65U&usqp=CAU",
+                            child: Image.asset(
+                              "images/images4.jpeg",
                               fit: BoxFit.cover,
                               width: 200,
                               height: 150,
@@ -266,7 +253,10 @@ class CheckOutState extends State<CheckOut> {
                   Container(
                     child: Text("Payyment Method",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20)),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          fontFamily: "Ral",
+                        )),
                   ),
                 ],
               ),
@@ -294,8 +284,8 @@ class CheckOutState extends State<CheckOut> {
                         opacity: 0.7,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                            "https://logo-download.com/wp-content/data/images/png/PayPal-logo.png?ezimgfmt=ngcb1/notWebP",
+                          child: Image.asset(
+                            "images/Pay.jpeg",
                             fit: BoxFit.cover,
                             width: 80,
                             height: 40,
@@ -323,8 +313,8 @@ class CheckOutState extends State<CheckOut> {
                         opacity: 0.7,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Image.network(
-                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqhLbCCGwzZJz1ZHCG78vpqiHYXjwn707Xlw&usqp=CAU",
+                          child: Image.asset(
+                            "images/images13.png",
                             fit: BoxFit.cover,
                             width: 80,
                             height: 40,
@@ -352,8 +342,8 @@ class CheckOutState extends State<CheckOut> {
                         opacity: 0.7,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.network(
-                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfbcpqYb8mWL-ernlwjba-FhUyUOkuaFaVK1t3YwLMC7kJeWcVTJ0gHLuJqLV1mrXmGVQ&usqp=CAU",
+                          child: Image.asset(
+                            "images/images14.png",
                             fit: BoxFit.cover,
                             width: 80,
                             height: 40,
@@ -381,8 +371,8 @@ class CheckOutState extends State<CheckOut> {
                         opacity: 0.7,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.network(
-                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKKrahNcSct9hrC1hyzy7MvyRs6OfouoFZTp_x4-uBv4ytRMEUf_JdNSBGvOdh_LQMrS8&usqp=CAU",
+                          child: Image.asset(
+                            "images/images15.jpeg",
                             fit: BoxFit.cover,
                             width: 80,
                             height: 40,
@@ -410,8 +400,8 @@ class CheckOutState extends State<CheckOut> {
                         opacity: 0.7,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
-                          child: Image.network(
-                            "https://image.cnbcfm.com/api/v1/image/106349589-1579720435046gettyimages-1192592454.jpeg?v=1579721288&w=929&h=523&vtcrop=y",
+                          child: Image.asset(
+                            "images/images16.jpeg",
                             fit: BoxFit.cover,
                             width: 80,
                             height: 40,
@@ -430,7 +420,10 @@ class CheckOutState extends State<CheckOut> {
                   Container(
                     child: Text("Order Summary",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20)),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          fontFamily: "Ral",
+                        )),
                   ),
                 ],
               ),
@@ -454,11 +447,14 @@ class CheckOutState extends State<CheckOut> {
                             hintStyle: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
-                                fontSize: 20),
-                            suffix: Text("Add Coupon Code >"),
-                            suffixStyle:
-                                TextStyle(color: Colors.grey, fontSize: 18),
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                                fontFamily: "Ral",
+                                fontSize: 18),
+                            suffixIcon: Padding(
+                                padding: EdgeInsets.all(15),
+                                child: Text('add')),
+
+                            // suffixIcon: Icon(Icons.search),
+                            // floatingLabelBehavior: FloatingLabelBehavior.always,
                             enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(
@@ -482,24 +478,23 @@ class CheckOutState extends State<CheckOut> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        child: Text(
-                          "Total",
-                          style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        ),
+                      Text(
+                        "Total",
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 5),
-                      Container(
-                        child: Text(
-                          "\$170.0",
-                          style: TextStyle(
-                              color: Colors.amber,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20),
-                        ),
+                      Divider(
+                        // thickness: 3,
+                        color: Colors.red,
+                      ),
+                      Text(
+                        "\$170.0",
+                        style: TextStyle(
+                            color: Colors.amber,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
                       )
                     ],
                   ),

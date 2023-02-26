@@ -21,3 +21,18 @@ class YourCart {
   // int? counfive;
   YourCart({this.image, this.name, this.price});
 }
+
+class WishList {
+  String? image;
+  String? name;
+  String? price;
+  // int coun?;
+  WishList({this.image, this.name, this.price});
+}
+
+class Lang {
+  String? image;
+  String? name;
+
+  Lang({this.image, this.name});
+}

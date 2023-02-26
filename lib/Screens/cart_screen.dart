@@ -13,32 +13,27 @@ class Cart extends StatefulWidget {
 class CartState extends State<Cart> {
   List<YourCart> carts = [
     YourCart(
-      image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp7mAszBeIyK-Q8Pn2ChY7JsmQSD5bSHCCgYP3fij4n2Pm2b8L9WkeNS7pRy6-jwbnt3g&usqp=CAU",
+      image: "images/images6.jpeg",
       name: "Mackbook ''22 Air",
       price: "\$200",
     ),
     YourCart(
-      image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdhNBkL8WEPHyzG2LGakFcmraI5aso5okt__9hiiGVkxONjPHmxnYP3hs3pFzXM6RY65U&usqp=CAU",
+      image: "images/images4.jpeg",
       name: "Bluetooth Printer",
       price: "\$300",
     ),
     YourCart(
-      image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzqDQ5E2koQ7Pu27Cu9BKRVeutPvz6QrxCBQ&usqp=CAU",
+      image: "images/images3.jpeg",
       name: "Iphone 14 Pro Max",
       price: "\$400",
     ),
     YourCart(
-      image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvnLFRMtBhfP9MHDBry2nfJEwMsCWiDhES4g&usqp=CAU",
+      image: "images/images.png",
       name: "Anti-Blue Light ",
       price: "\$400",
     ),
     YourCart(
-      image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzqDQ5E2koQ7Pu27Cu9BKRVeutPvz6QrxCBQ&usqp=CAU",
+      image: "images/images5.jpeg",
       name: "Iphone 14 Pro Max",
       price: "\$400",
     ),
@@ -48,6 +43,7 @@ class CartState extends State<Cart> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: SafeArea(
           child: (Container(
             margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -88,7 +84,8 @@ class CartState extends State<Cart> {
                   height: 10,
                 ),
                 ListView.separated(
-                    scrollDirection: Axis.vertical,
+                    // scrollDirection: Axis.vertical,
+                    physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return Container(
@@ -112,7 +109,7 @@ class CartState extends State<Cart> {
                               opacity: 0.8,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(25),
-                                child: Image.network("${carts[index].image}",
+                                child: Image.asset("${carts[index].image}",
                                     width: 125,
                                     height: 100,
                                     fit: BoxFit.fitHeight),
